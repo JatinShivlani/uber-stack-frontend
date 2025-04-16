@@ -10,7 +10,7 @@ const Start = () => {
       <img src={logo} alt="logo" className="w-28 mt-5 ml-5  z-[1]" />
       <div className="bg-white flex flex-col gap-3 justify-center w-full py-3 items-center  z-[1]">
         <p className="self-start mx-3 text-xl font-semibold">Get Started with Uber</p>
-        <Link to={"login"} className="w-[80%]">
+        <Link to={"/login"} className="w-[80%]">
           {" "}
           <button className="bg-black flex justify-center gap-2 items-center px-3 py-2 rounded-md font-semibold text-lg text-white w-full">
             countinue
