@@ -1,16 +1,16 @@
 import React from "react";
 import { Route, Router, Routes } from "react-router-dom";
-import Home from "./pages/Home";
 import UserLogin from "./pages/UserLogin";
 import UserSignup from "./pages/UserSignup";
 import CaptianLogin from "./pages/CaptianLogin";
 import CaptianSignup from "./pages/CaptianSignup";
+import Start from "./pages/Start";
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Start />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/signup" element={<UserSignup />} />
         <Route path="/captian-login" element={<CaptianLogin />} />
