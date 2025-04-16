@@ -5,12 +5,14 @@ import UserSignup from "./pages/UserSignup";
 import CaptianLogin from "./pages/CaptianLogin";
 import CaptianSignup from "./pages/CaptianSignup";
 import Start from "./pages/Start";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Start />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/signup" element={<UserSignup />} />
         <Route path="/captian-login" element={<CaptianLogin />} />

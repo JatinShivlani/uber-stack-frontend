@@ -1,27 +1,42 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logoBlack from "../assets/logo-black.png";
+import axios from "axios";
+import { UserDataContext } from "../context/UserContext";
+
 const UserSignup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [useData, setUserData] = useState({});
-  const submithandler = (e) => {
+
+  const navigate = useNavigate();
+  const { user, setUser } = useContext(UserDataContext);
+
+  const submithandler = async (e) => {
     e.preventDefault();
-    setUserData({
-      fullName: {
-        firstName: firstName,
-        lastName: lastName,
+    const newUser = {
+      fullname: {
+        firstname: firstName,
+        lastname: lastName,
       },
       email: email,
       password: password,
-    });
+    };
+    // sending data to backend
+    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser);
+    if (response.status == 201) {
+      const data = response.data;
+      setUser(data.user);
+      navigate("/home");
+    }
+    console.log(response);
     setEmail("");
     setPassword("");
     setFirstName("");
     setLastName("");
   };
+
   return (
     <div className="h-screen p-7 w-full flex flex-col justify-between">
       {/* upper div form */}
