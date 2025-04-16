@@ -102,7 +102,7 @@ const UserSignup = () => {
           </Link>
         </p>
       </div>
-      {/* lower div sign in as captian */}
+      {/* lower div sign in as captain */}
       <div>
         <p className="text-[12px]">
           By signing up, you agree to receive updates, offers, and notifications via email,

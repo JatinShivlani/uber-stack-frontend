@@ -69,13 +69,13 @@ const UserLogin = () => {
           </Link>
         </p>
       </div>
-      {/* lower div sign in as captian */}
+      {/* lower div sign in as captain */}
       <div>
         <Link
-          to={"/captian-login"}
+          to={"/captain-login"}
           className="bg-green-400 flex justify-center items-center px-3 py-2 rounded-md font-semibold text-lg text-white w-full"
         >
-          Sign in as Captian
+          Sign in as captain
         </Link>
       </div>
     </div>

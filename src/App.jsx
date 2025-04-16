@@ -2,12 +2,12 @@ import React from "react";
 import { Route, Router, Routes } from "react-router-dom";
 import UserLogin from "./pages/UserLogin";
 import UserSignup from "./pages/UserSignup";
-import CaptianLogin from "./pages/CaptianLogin";
-import CaptianSignup from "./pages/CaptianSignup";
+import CaptainLogin from "./pages/CaptainLogin";
+import CaptainSignup from "./pages/CaptainSignup";
 import Start from "./pages/Start";
 import Home from "./pages/Home";
 import UserProtectedWrapper from "./pages/UserProtectedWrapper";
-import CaptianHome from "./pages/CaptianHome";
+import CaptainHome from "./pages/CaptainHome";
 
 const App = () => {
   return (
@@ -18,11 +18,11 @@ const App = () => {
           <UserProtectedWrapper>
             <Home />
           </UserProtectedWrapper>} />
-        <Route path="/captian-home" element={<CaptianHome/>}/>
+        <Route path="/captain-home" element={<CaptainHome/>}/>
         <Route path="/login" element={<UserLogin />} />
         <Route path="/signup" element={<UserSignup />} />
-        <Route path="/captian-login" element={<CaptianLogin />} />
-        <Route path="/captian-signup" element={<CaptianSignup />} />
+        <Route path="/captain-login" element={<CaptainLogin />} />
+        <Route path="/captain-signup" element={<CaptainSignup />} />
       </Routes>
     </>
   );

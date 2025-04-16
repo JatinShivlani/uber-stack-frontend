@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CaptainDataContext } from '../context/CaptianContext'
+import { CaptainDataContext } from '../context/CaptainContext'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import logoBlack from '../assets/logo-black.png'
@@ -39,13 +39,13 @@ const CaptainSignup = () => {
       }
     }
 
-    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captians/register`, captainData)
+    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/register`, captainData)
 
     if (response.status === 201) {
       const data = response.data
       setCaptain(data.captain)
       localStorage.setItem('token', data.token)
-      navigate('/captian-home')
+      navigate('/captain-home')
     }
 
     setEmail('')
@@ -169,7 +169,7 @@ const CaptainSignup = () => {
           >Create Captain Account</button>
 
         </form>
-        <p className='text-center text-sm'>Already have a account? <Link to='/captian-login' className='text-blue-600'>Login here</Link></p>
+        <p className='text-center text-sm'>Already have a account? <Link to='/captain-login' className='text-blue-600'>Login here</Link></p>
       </div>
       <div>
         <p className="text-[10px]">

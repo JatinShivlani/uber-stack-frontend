@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import logoBlack from "../assets/logo-black.png";
 import axios from 'axios';
-import { CaptainDataContext } from '../context/CaptianContext';
-const CaptianLogin = () => {
+import { CaptainDataContext } from '../context/CaptainContext';
+const CaptainLogin = () => {
     const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
 
@@ -19,14 +19,14 @@ const CaptianLogin = () => {
       password
     }
 
-    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captians/login`, captain)
+    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/login`, captain)
 
     if (response.status === 200) {
       const data = response.data
 
       setCaptain(data.captain)
       localStorage.setItem('token', data.token)
-      navigate('/captian-home')
+      navigate('/captain-home')
 
     }
 
@@ -47,10 +47,10 @@ const CaptianLogin = () => {
                     <button className="bg-black flex justify-center gap-2 items-center px-3 py-2 rounded-md font-semibold text-lg text-white w-full">Login</button>
                 </form>
                 <p className="text-sm">
-                    Want to Join ? <Link to={"/captian-signup"} className="text-blue-600">Create new Account</Link>
+                    Want to Join ? <Link to={"/captain-signup"} className="text-blue-600">Create new Account</Link>
                 </p>
             </div>
-            {/* lower div sign in as captian */}
+            {/* lower div sign in as captain */}
             <div>
                 <Link
                     to={"/login"}
@@ -63,4 +63,4 @@ const CaptianLogin = () => {
     );
 };
 
-export default CaptianLogin
+export default CaptainLogin
