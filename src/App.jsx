@@ -19,6 +19,10 @@ const App = () => {
 
   return (
     <div>
+    <p className="sm:flex hidden h-screen justify-center items-center text-xl  text-black">
+         Open in mobile screen
+       </p>
+       <div className="sm:hidden block">
       <Routes>
         <Route path='/' element={<Start />} />
         <Route path='/login' element={<UserLogin />} />
@@ -51,6 +55,7 @@ const App = () => {
           </CaptainProtectWrapper>
         } />
       </Routes>
+      </div>
     </div>
   )
 }
