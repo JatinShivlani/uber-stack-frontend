@@ -8,7 +8,6 @@ const CaptainProtectWrapper = ({
 }) => {
 
     const token = localStorage.getItem('token')
-    console.log('token', token)
     const navigate = useNavigate()
     const { captain, setCaptain } = useContext(CaptainDataContext)
     const [ isLoading, setIsLoading ] = useState(true)
