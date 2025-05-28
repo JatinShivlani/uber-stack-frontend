@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom'
 import Start from './pages/Start'
 import UserLogin from './pages/UserLogin'
 import UserSignup from './pages/UserSignup'
-import Captainlogin from './pages/Captainlogin.jsx'
 import CaptainSignup from './pages/CaptainSignup'
 import Home from './pages/Home'
 import UserProtectWrapper from './pages/UserProtectedWrapper'
@@ -14,6 +13,7 @@ import CaptainLogout from './pages/CaptainLogout'
 import Riding from './pages/Riding'
 import CaptainRiding from './pages/CaptainRiding'
 import 'remixicon/fonts/remixicon.css'
+import CaptainLogin from './pages/CaptainLogin'
 
 const App = () => {
 
